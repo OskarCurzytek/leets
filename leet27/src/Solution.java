@@ -18,9 +18,7 @@ class Solution {
             if(i == 0 && carry){
                 int[] result = new int[digits.length+1];
                 result[0] = 1;
-                for(int j = 1; j < result.length - 1; j++){
-                    result[j] = digits[j-1];
-                }
+                System.arraycopy(digits, 0, result, 1, result.length - 1 - 1);
                 return result;
             }
         }
